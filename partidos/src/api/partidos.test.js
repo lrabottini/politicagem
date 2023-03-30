@@ -10,7 +10,7 @@ let app = null
 beforeAll(async () => {
     app = await server.start(partidos, repository)
 
-    const result = await repository.listarPartidos()
+    const result = await repository.getPartidos()
     testId = result[0].id    
 
     console.log(testId)
